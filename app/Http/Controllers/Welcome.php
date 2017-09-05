@@ -15,15 +15,13 @@ class Welcome extends Controller
     {
         /** @var DatabaseManager $db */
         $db = $this->ci->get('db');
+        $logger = $this->ci->get('logger');
         try {
             $user = $db->table("users")->select(['user_id','user_name'])->first();
-            return $response->getBody()->write(json_encode($user));
+            return $response->withJson($user);
         } catch (QueryException $e) {
-            echo $e->getMessage();
+            $logger->error($e->getMessage());
         }
-        $logger = $this->ci->get('logger');
-        $logger->info('a logger info');
-        $response->getBody()->write("Hello, world");
-        return $response;
+        return $response->getBody()->write("Hello, world");
     }
 }
