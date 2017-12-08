@@ -8,8 +8,8 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         'e2dc9bd93b440c117846b013b37f0ab5' => __DIR__ . '/../..' . '/app/Helpers.php',
     );
@@ -25,6 +25,7 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
         ),
         'T' => 
         array (
+            'Twig\\' => 5,
             'Tests\\' => 6,
         ),
         'S' => 
@@ -32,6 +33,7 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Translation\\' => 30,
+            'Slim\\Views\\' => 11,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -82,6 +84,10 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
@@ -97,6 +103,10 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Slim\\Views\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/twig-view/src',
         ),
         'Slim\\' => 
         array (
@@ -160,7 +170,18 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/bryanjhv/slim-session/src',
+    );
+
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
@@ -182,7 +203,7 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
     );
 
     public static $classMap = array (
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/Users.php',
+        'App\\Models\\Users' => __DIR__ . '/../..' . '/app/Models/Users.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -655,6 +676,7 @@ class ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitffc1267f2b2c32f61c24004da57f71bf::$classMap;
 
