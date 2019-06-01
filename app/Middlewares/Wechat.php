@@ -41,7 +41,7 @@ class Wechat
             $this->session->set('openid', $openid);
         }
         if (!$this->session->exists('openid')) {
-            throw new \Exception('http://jubei.rtb1688.com/mobile/auth.php', 302);
+            throw new \Exception('http://xxxxx.com/auth.php', 302);
         }
         if (empty($this->session->get('openid'))) {
             $this->session->delete('openid');
